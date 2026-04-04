@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corota AI Lab. | データサイエンスを身近に</title>
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #fcfcfc;
+            --ink: #111111;
+            --accent: #2563eb;
+        }
+        body {
+            background-color: var(--paper);
+            color: var(--ink);
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-image: radial-gradient(#e5e7eb 0.5px, transparent 0.5px);
+            background-size: 40px 40px;
+        }
+        .serif { font-family: 'Noto Serif JP', serif; }
+        .mono  { font-family: 'JetBrains Mono', monospace; }
+
+        .section-border { border-top: 1px solid rgba(0,0,0,0.08); }
+
+        .btn-main {
+            background: var(--ink);
+            color: #fff;
+            padding: 0.75rem 2rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+        .btn-main:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .img-box {
+            filter: grayscale(100%);
+            transition: filter 0.5s ease;
+            background-color: #eee;
+        }
+        .img-box:hover { filter: grayscale(0%); }
+
+        /* ハンバーガー アニメーション */
+        #bar1, #bar2, #bar3 { transition: transform 0.25s ease, opacity 0.25s ease; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- ===== Header ===== -->
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <h1 class="font-bold text-lg tracking-tighter">Corota AI Lab.</h1>
+
+            <!-- PC nav -->
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="#about"    class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">About</a>
+                <a href="#services" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Services</a>
+                <a href="#works"    class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Works</a>
+                <a href="#contact"  class="btn-main px-6 py-2">Contact</a>
+            </nav>
+
+            <!-- ハンバーガー (モバイルのみ) -->
+            <button id="menu-btn" class="md:hidden flex flex-col gap-[5px] p-2" aria-label="メニューを開く">
+                <span id="bar1" class="block w-5 h-[1.5px] bg-black"></span>
+                <span id="bar2" class="block w-5 h-[1.5px] bg-black"></span>
+                <span id="bar3" class="block w-5 h-[1.5px] bg-black"></span>
+            </button>
+        </div>
+
+        <!-- モバイルメニュー -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-black/5 px-6 py-8 space-y-6">
+            <a href="#about"    class="block mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">About</a>
+            <a href="#services" class="block mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Services</a>
+            <a href="#works"    class="block mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Works</a>
+            <a href="#contact"  class="btn-main inline-block px-6 py-2">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-16">
+
+        <!-- ===== Hero ===== -->
+        <section class="max-w-7xl mx-auto px-6 py-24 md:py-40">
+            <div class="max-w-2xl">
+                <div class="flex items-center gap-2 mb-8">
+                    <span class="w-8 h-[1px] bg-blue-600"></span>
+                    <span class="mono text-[10px] text-blue-600 font-bold uppercase tracking-[0.3em]">Data Science Hub</span>
+                </div>
+                <h2 class="serif text-5xl md:text-7xl leading-[1.15] mb-10">
+                    秋田から、<br><span class="italic font-normal">地域の課題</span>に<br>向き合う。
+                </h2>
+                <p class="text-slate-500 text-sm md:text-base max-w-md leading-relaxed mb-10">
+                    秋田県にかほ市を拠点に、AIとデータ分析で地域の課題に取り組んでいます。
+                    野生動物の出没対策や業務改善など、現場の声をもとに一つひとつ開発を進めます。
+                </p>
+                <a href="#works" class="btn-main inline-block">View Projects</a>
+            </div>
+        </section>
+
+        <!-- ===== About ===== -->
+        <section id="about" class="section-border bg-white py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h3 class="mono text-[10px] text-slate-400 mb-4 tracking-[0.5em] uppercase">00 / About</h3>
+                    <h2 class="serif text-3xl italic">私たちについて</h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-20 items-start">
+                    <div>
+                        <p class="text-sm text-slate-600 leading-loose mb-6">
+                            Corota AI Lab. は、秋田県にかほ市を拠点とするデータサイエンス・AI開発の小さなスタジオです。AIを身近にし、地域で困っていることを技術で少しでも楽にしたいと考えています。
+                        </p>
+                        <p class="text-sm text-slate-600 leading-loose">
+                            野生動物の出没対策など、地域固有の問題に向き合いながら開発を続けています。
+                        </p>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="border-l-2 border-blue-600 pl-6">
+                            <p class="mono text-[10px] text-blue-600 mb-1 uppercase tracking-widest">所在地</p>
+                            <p class="text-sm text-slate-700">秋田県にかほ市金浦字頃田128-6</p>
+                        </div>
+                        <div class="border-l-2 border-slate-200 pl-6">
+                            <p class="mono text-[10px] text-slate-400 mb-1 uppercase tracking-widest">代表</p>
+                            <p class="text-sm text-slate-700">岩津みさき</p>
+                        </div>
+                        <div class="border-l-2 border-slate-200 pl-6">
+                            <p class="mono text-[10px] text-slate-400 mb-1 uppercase tracking-widest">提案できること</p>
+                            <p class="text-sm text-slate-700">データ分析 / AI / AIエージェント</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Services ===== -->
+        <section id="services" class="section-border bg-[#fcfcfc] py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20">
+                    <h3 class="mono text-[10px] text-slate-400 mb-4 tracking-[0.5em] uppercase">01 / Services</h3>
+                    <h2 class="serif text-3xl italic">提供できること</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-px bg-slate-100 border border-slate-100">
+                    <div class="bg-white p-12 hover:bg-slate-50 transition">
+                        <h4 class="font-bold mb-6 text-sm uppercase tracking-widest">データ分析</h4>
+                        <p class="text-xs text-slate-500 leading-loose">
+                            散在するデータを収集・整理し、判断に使いやすい形へ整え、解析を行います。基盤づくりの地道な部分から解析まで丁寧に対応します。
+                        </p>
+                    </div>
+                    <div class="bg-white p-12 hover:bg-slate-50 transition">
+                        <h4 class="font-bold mb-6 text-sm uppercase tracking-widest">AIモデル開発</h4>
+                        <p class="text-xs text-slate-500 leading-loose">
+                            現場の状況に合わせてモデルを設計・構築します。既製品を当てはめるだけでなく、課題の本質から考えます。
+                        </p>
+                    </div>
+                    <div class="bg-white p-12 hover:bg-slate-50 transition">
+                        <h4 class="font-bold mb-6 text-sm uppercase tracking-widest">AIエージェント開発</h4>
+                        <p class="text-xs text-slate-500 leading-loose">
+                            AIエージェントを活用した業務フローの効率化や業務改善を提案、開発いたします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Works ===== -->
+        <section id="works" class="section-border py-24 px-6 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h3 class="mono text-[10px] text-slate-400 mb-4 tracking-[0.5em] uppercase">02 / Works</h3>
+                    <h2 class="serif text-3xl italic">社会実装プロジェクト</h2>
+                </div>
+
+                <!-- くま予報 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h4 class="serif text-4xl mb-6 italic">くま予報</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-8">
+                            AIとGIS（地理情報システム）を組み合わせたクマの出没リスク予測サービスです。秋田・山形の目撃情報を収集・分析し、地域の安全に役立てることを目指しています。
+                        </p>
+                        <ul class="mono text-[10px] space-y-2 text-slate-400 mb-8">
+                            <li>[ REGION ] 秋田 / 山形 / 宮城　</li>
+                        </ul>
+                        <a href="https://kuma-forecast.corota-ai-lab.com/" class="mono text-[10px] font-bold border-b border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition uppercase tracking-widest">Go to Website</a>
+                    </div>
+                    <div class="order-1 md:order-2 img-box aspect-video rounded-sm overflow-hidden border border-black/5 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&q=80&w=1000" alt="クマ" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- プログラミング教室 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center mt-16 pt-16 border-t border-slate-100">
+                    <div class="img-box aspect-video rounded-sm overflow-hidden border border-black/5 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000" alt="Programming School" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h4 class="serif text-4xl mb-6 italic">プログラミング教室</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-8">
+                            小学生から社会人まで、AI・機械学習・データ分析・AIエージェント開発を学べる教室を開いています。難しい理論よりも「動かして理解する」を大切に、秋田から次の世代の担い手を育てます。
+                        </p>
+                        <ul class="mono text-[10px] space-y-2 text-slate-400 mb-8">
+                            <li>[ TARGET ] 小学生 / 中学生 / 高校生 / 社会人</li>
+                            <li>[ SUBJECT ] AI / ML / DATA / AGENT</li>
+                            <li>[ STATUS ] OPEN</li>
+                        </ul>
+                        <a href="https://data-science-lab.corota-ai-lab.com/" class="mono text-[10px] font-bold border-b border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition uppercase tracking-widest">Go to Website</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== News (一時非表示) =====
+        <section id="news" class="section-border py-24 px-6 bg-[#fcfcfc]">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="mono text-[10px] text-slate-400 mb-4 tracking-[0.5em] uppercase text-center">03 / News</h3>
+                <h2 class="serif text-3xl italic text-center mb-16">お知らせ</h2>
+                <div class="space-y-1">
+
+                    コピーして href・日付・タイトルを書き換えてください
+                    <a href="#" class="group flex items-center justify-between py-6 border-b border-slate-100 hover:px-4 transition-all">
+                        <div class="flex items-center gap-8">
+                            <span class="mono text-[10px] text-slate-300 shrink-0">YYYY.MM.DD</span>
+                            <span class="text-sm font-medium group-hover:text-blue-600 transition">ニュースのタイトルをここに入力</span>
+                        </div>
+                        <span class="mono text-[10px] shrink-0 opacity-0 group-hover:opacity-100 transition">READ_MORE</span>
+                    </a>
+                    <a href="#" class="group flex items-center justify-between py-6 border-b border-slate-100 hover:px-4 transition-all">
+                        <div class="flex items-center gap-8">
+                            <span class="mono text-[10px] text-slate-300 shrink-0">YYYY.MM.DD</span>
+                            <span class="text-sm font-medium group-hover:text-blue-600 transition">ニュースのタイトルをここに入力</span>
+                        </div>
+                        <span class="mono text-[10px] shrink-0 opacity-0 group-hover:opacity-100 transition">READ_MORE</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+        ===== News ここまで ===== -->
+
+        <!-- ===== Footer / Contact ===== -->
+        <footer id="contact" class="section-border py-32 bg-white px-6">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="serif text-4xl md:text-5xl italic mb-10 text-slate-800">Stay tech, stay local.</h2>
+                <p class="mono text-[10px] text-slate-400 tracking-[0.5em] mb-16 uppercase">Akita / Nikaho — Data Science &amp; AI</p>
+                <div class="inline-block border border-black p-1">
+                    <a href="mailto:corota.ai.lab@gmail.com" class="btn-main block px-12 py-4 rounded-none">corota.ai.lab@gmail.com</a>
+                </div>
+                <div class="mt-32 pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="mono text-[9px] opacity-40 tracking-widest lowercase">© 2026 corota ai lab. akita nikaho jpn</p>
+                    <div class="flex space-x-8 mono text-[9px] opacity-40 uppercase tracking-widest">
+                        <a href="https://x.com/CorotaAiLab" class="hover:opacity-100 transition">X</a>
+                        <a href="https://www.instagram.com/corota_ai_lab/" class="hover:opacity-100 transition">Instagram</a>
+                        <a href="./privacy.html" class="hover:opacity-100 transition">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const menuBtn    = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const bar1 = document.getElementById('bar1');
+        const bar2 = document.getElementById('bar2');
+        const bar3 = document.getElementById('bar3');
+        let isOpen = false;
+
+        function openMenu() {
+            isOpen = true;
+            mobileMenu.classList.remove('hidden');
+            bar1.style.transform = 'translateY(6.5px) rotate(45deg)';
+            bar2.style.opacity   = '0';
+            bar3.style.transform = 'translateY(-6.5px) rotate(-45deg)';
+        }
+
+        function closeMenu() {
+            isOpen = false;
+            mobileMenu.classList.add('hidden');
+            bar1.style.transform = '';
+            bar2.style.opacity   = '';
+            bar3.style.transform = '';
+        }
+
+        menuBtn.addEventListener('click', () => isOpen ? closeMenu() : openMenu());
+
+        // リンクをタップしたらメニューを閉じる
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
+
+</body>
+</html>
