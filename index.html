@@ -129,6 +129,22 @@
 
     <main class="pt-16">
 
+        <!-- ===== CM Video ===== -->
+        <section class="relative overflow-hidden bg-[#0a0e1a]">
+            <video
+                id="heroVideo"
+                class="w-full h-auto block"
+                autoplay muted loop playsinline
+                poster="/images/corota-cm-poster.jpg">
+                <source src="/videos/corota-cm.mp4" type="video/mp4">
+            </video>
+
+            <button id="soundToggle" aria-label="音声のオン・オフを切り替える"
+                class="absolute bottom-6 right-6 z-10 mono text-[10px] tracking-widest uppercase bg-white/10 backdrop-blur-sm border border-white/30 text-white px-4 py-2 rounded-full hover:bg-white/20 transition">
+                🔇 Sound
+            </button>
+        </section>
+
         <!-- ===== Hero ===== -->
         <section class="max-w-7xl mx-auto px-6 py-24 md:py-40">
             <div class="max-w-2xl">
@@ -580,6 +596,16 @@
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMenu);
         });
+
+        // Hero動画の音声トグル
+        const heroVideo = document.getElementById('heroVideo');
+        const soundToggle = document.getElementById('soundToggle');
+        if (heroVideo && soundToggle) {
+            soundToggle.addEventListener('click', () => {
+                heroVideo.muted = !heroVideo.muted;
+                soundToggle.textContent = heroVideo.muted ? '🔇 Sound' : '🔊 Sound';
+            });
+        }
     </script>
 
 </body>
