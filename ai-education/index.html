@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秋田発・全国対応のAIプログラミング教室 | データサイエンス・ラボ</title>
+
+    <meta name="description" content="秋田県にかほ市発、オンラインで全国対応。現役シニアデータサイエンティストによるAI・データサイエンス特化型プログラミング教室。小学生から社会人までPythonや機械学習をマンツーマンで学びます。">
+    <meta name="keywords" content="データサイエンス, AI学習, Python, オンライン, 全国対応, 秋田県, にかほ市, 由利本荘市, 山形県, 酒田市, プログラミング教室, 子供, 社会人, DX">
+
+    <link rel="canonical" href="https://corota-ai-lab.com/ai-education/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://corota-ai-lab.com/ai-education/">
+    <meta property="og:title" content="秋田発・全国対応のAIプログラミング教室 | データサイエンス・ラボ">
+    <meta property="og:description" content="現役シニアDSによるマンツーマン指導。秋田・山形から全国へ。「やりたい」をAIで形にする体験を。">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="秋田発・全国対応のAIプログラミング教室 | データサイエンス・ラボ">
+    <meta name="twitter:description" content="現役シニアDSと学ぶ、キミだけのAI構築。秋田・山形から全国へ。">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200">
+
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JK4P3YRMRP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JK4P3YRMRP');
+    </script>
+
+    <!-- 構造化データ: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["EducationalOrganization", "LocalBusiness"],
+      "name": "データサイエンス・ラボ",
+      "alternateName": "Corota AI Lab.",
+      "url": "https://corota-ai-lab.com/ai-education/",
+      "telephone": "080-8095-5424",
+      "email": "corota.ai.lab@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "金浦字頃田128-6",
+        "addressLocality": "にかほ市",
+        "addressRegion": "秋田県",
+        "addressCountry": "JP"
+      },
+      "description": "秋田県にかほ市発、オンラインで全国対応のAI・データサイエンス特化型プログラミング教室。現役シニアデータサイエンティストによる完全個別指導。小学生から社会人まで対応。",
+      "areaServed": [
+        {"@type": "Country", "name": "Japan"},
+        {"@type": "City", "name": "にかほ市"},
+        {"@type": "City", "name": "由利本荘市"},
+        {"@type": "City", "name": "酒田市"}
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "にかほ市商工会"
+      },
+      "sameAs": "https://lin.ee/IQm1IVT"
+    }
+    </script>
+
+    <!-- 構造化データ: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "数学や算数が苦手な子でも大丈夫でしょうか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "全く問題ありません。計算はコンピュータに任せ、まずは「AIがどう考えているか」を直感的に理解することから始めます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どのようなPCの準備が必要ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "学校配布のPC等でOKです。Webブラウザ上で動作するシステムを使うため、高価なPCを新調する必要はありません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "実際のオンライン授業はどうやって行うのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ビデオ通話はGoogle Meet、コーディング環境はGoogle Colabを使用します。どちらもブラウザだけで完結するため、追加のソフトインストールは不要です。社会人向けのClaude Code体験のみ、ご自身のPCへのインストールをお願いする場合があります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "社会人ですが、実務の相談は可能ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "大歓迎です。業務効率化や予測モデル構築、Claude Codeを使ったAI駆動開発など、実務経験豊富な講師が現場で使える技術をサポートします。"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #1a4d80;
+            --accent: #00d2ff;
+            --orange: #ff7e5f;
+            --bg-light: #f0f4f8;
+            --text-main: #2c3e50;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            box-sizing: border-box;
+        }
+
+        .nav-logo {
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        .nav-home {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .nav-home:hover { color: var(--primary); }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--orange); }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        /* Hero */
+        .hero {
+            padding-top: 160px;
+            background: linear-gradient(rgba(26, 77, 128, 0.85), rgba(26, 77, 128, 0.85)),
+                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding-bottom: 120px;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 20px; line-height: 1.3; font-weight: 800; }
+        .hero span.highlight { color: var(--accent); }
+
+        /* Steps Section */
+        .step-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .step-item {
+            background: white;
+            border: 2px solid #eef2f7;
+            border-radius: 15px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+        .step-num {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .step-content h3 { margin: 0 0 5px 0; color: var(--primary); font-size: 1.1rem; }
+        .step-content p { margin: 0; font-size: 0.95rem; }
+        .step-arrow { text-align: center; color: var(--accent); font-size: 1.5rem; margin: -10px 0; }
+
+        .about-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .feature-item {
+            text-align: center;
+        }
+        .feature-item i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 25px rgba(255, 126, 95, 0.4);
+            transition: 0.3s;
+            margin: 10px;
+        }
+
+        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(255, 126, 95, 0.6); }
+
+        .floating-cta {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            background: #06C755;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+
+        section { padding: 80px 20px 40px; max-width: 1000px; margin: 0 auto; }
+        h2 { text-align: center; color: var(--primary); font-size: 2.2rem; margin-bottom: 40px; position: relative; }
+        h2::after { content: ""; display: block; width: 60px; height: 4px; background: var(--accent); margin: 15px auto 0; }
+
+        /* Pain points */
+        .pain-points { background: #fff4e5; padding: 50px 20px; border-radius: 30px; margin-bottom: 60px; }
+        .pain-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .pain-item { background: #fff; padding: 25px; border-radius: 15px; border-left: 5px solid var(--orange); }
+        .solution-arrow { text-align: center; margin: 20px 0; color: var(--primary); font-size: 2rem; }
+
+        /* Skill Cards */
+        .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .skill-card { background: white; border: 1px solid #e2e8f0; padding: 25px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .skill-card h3 { color: var(--primary); margin-top: 0; font-size: 1.2rem; display: flex; align-items: center; }
+        .skill-card h3 i { margin-right: 10px; color: var(--accent); }
+        .skill-card ul { padding-left: 20px; margin-bottom: 0; font-size: 0.95rem; }
+
+        /* Area Section */
+        .area-box { background: #f8fafc; padding: 30px; border-radius: 20px; border: 1px solid var(--accent); margin-top: 40px; text-align: center; }
+        .area-list { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 15px; font-weight: bold; color: var(--primary); }
+
+        /* Info Cards */
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 50px; }
+        .info-card { background: #fff; border: 2px solid var(--primary); padding: 25px; border-radius: 15px; text-align: center; position: relative; }
+        .price-old { text-decoration: line-through; color: #999; font-size: 1.2rem; }
+        .price-new { font-size: 2.2rem; font-weight: bold; color: var(--orange); display: block; }
+        .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--orange); color: #fff; padding: 2px 15px; border-radius: 10px; font-size: 0.8rem; font-weight: bold; }
+
+        /* Organization */
+        .org-box { background: var(--primary); color: white; padding: 50px; border-radius: 30px; margin-top: 60px; }
+        .org-box h2 { color: white; text-align: left; margin: 20px 0; font-size: 1.8rem; }
+        .org-box h2::after { display: none; }
+        .org-tag { background: var(--accent); color: var(--primary); padding: 5px 15px; border-radius: 5px; font-weight: bold; font-size: 0.9rem; }
+
+        /* Profile */
+        .profile-container { background: var(--bg-light); padding: 50px; border-radius: 30px; display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; background: #ccc; flex-shrink: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+
+        /* Instructor credentials */
+        .credential-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        .credential-tag {
+            background: var(--primary);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq-item { margin-bottom: 20px; background: #fff; border: 1px solid #ddd; border-radius: 12px; padding: 20px; }
+        .faq-item h4 { color: var(--primary); margin: 0 0 10px 0; display: flex; align-items: flex-start; font-size: 1.1rem; }
+        .faq-item h4::before { content: "Q."; color: var(--orange); margin-right: 10px; font-weight: bold; }
+        .faq-answer { display: flex; font-size: 0.95rem; line-height: 1.6; }
+        .faq-answer::before { content: "A."; color: var(--accent); margin-right: 10px; font-weight: bold; }
+
+        footer { background: #0b1a2a; color: white; text-align: center; padding: 60px 20px; }
+        .contact-link { color: var(--accent); text-decoration: none; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hamburger { display: flex; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 20px 40px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                box-sizing: border-box;
+            }
+            .nav-links.open { display: flex; }
+            .profile-container { flex-direction: column; text-align: center; padding: 30px 20px; }
+            .org-box { padding: 30px 20px; }
+            .floating-cta { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div style="display:flex; align-items:center;">
+            <a href="/" class="nav-home">&larr; Corota AI Lab.</a>
+            <a href="#" class="nav-logo">データサイエンス・ラボ</a>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#about">ラボについて</a>
+            <a href="#flow">教室の流れ</a>
+            <a href="#details">概要・料金</a>
+            <a href="#curriculum">学習内容</a>
+            <a href="#instructor">講師</a>
+            <a href="#faq">Q&A</a>
+            <a href="#contact" style="color: var(--orange);">無料体験予約</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <a href="https://lin.ee/IQm1IVT" class="floating-cta">
+        <i class="fab fa-line fa-lg"></i>
+        <span>無料体験を予約する</span>
+    </a>
+
+    <header class="hero">
+        <p style="font-weight: bold; letter-spacing: 3px; color: var(--accent);">秋田発・オンラインで全国対応のAI・プログラミング学習</p>
+        <h1>秋田・にかほ発、全国どこからでも学べる<br><span class="highlight">「楽しむ」</span>データサイエンス。</h1>
+        <p>現役シニアデータサイエンティストによる完全個別指導。<br>オンライン教室で、キミだけのAIを構築しよう。</p>
+        <a href="https://lin.ee/IQm1IVT" class="cta-button">2回無料体験を申し込む</a>
+    </header>
+
+    <section id="about">
+        <h2>秋田・山形から次世代のAI人材を</h2>
+        <div class="about-box">
+            <p style="text-align: center; font-size: 1.2rem; color: var(--primary); font-weight: bold;">
+                秋田県にかほ市発、オンラインで「学び」を全国へ。
+            </p>
+            <p>
+                データサイエンス・ラボは、秋田県にかほ市を拠点に活動するオンライン研究室です。オンライン完結のため、全国どこからでもご参加いただけます。
+                最大5名までの少人数制で、プロのデータサイエンティストが、個人の興味に合わせた指導を行います。
+            </p>
+            <div class="about-features">
+                <div class="feature-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>地域密着の安心感</h3>
+                    <p>にかほ市商工会所属。地元の課題や小中学校の状況も踏まえた親身な指導が強みです。</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-laptop-house"></i>
+                    <h3>送迎不要のオンライン</h3>
+                    <p>全国どこからでも、ご自宅から本格的なAI技術を。通塾の負担はありません。</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>本質的なDXスキル</h3>
+                    <p>ただのコード書きではなく、データをどう読み解くかという「考える力」を養います。</p>
+                </div>
+            </div>
+
+            <div class="area-box">
+                <strong>【対応エリア】</strong>
+                <div class="area-list">
+                    <span>オンライン全国対応</span>
+                    <span>秋田県にかほ市</span>
+                    <span>由利本荘市</span>
+                    <span>山形県酒田市</span>
+                    <span>遊佐町</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="flow">
+        <h2>AI構築までのステップ</h2>
+        <p style="text-align: center; margin-bottom: 30px;">「何から始めればいいか分からない」を、オーダーメイドのプランで解決します。</p>
+
+        <div class="step-container">
+            <div class="step-item">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h3>初回ヒアリング</h3>
+                    <p>「どんなことに興味があるか」「AIで何を解決したいか」を伺い、個別の学習目標を設定します。</p>
+                </div>
+            </div>
+            <div class="step-arrow"><i class="fas fa-chevron-down"></i></div>
+
+            <div class="step-item" style="border-color: var(--orange);">
+                <div class="step-num" style="background: var(--orange);">2</div>
+                <div class="step-content">
+                    <h3>プラン作成 ＆ 無料体験（2回）</h3>
+                    <p>あなた専用のロードマップを作成。実際のツールを使い、まずは2回じっくり体験してください。</p>
+                </div>
+            </div>
+            <div class="step-arrow"><i class="fas fa-chevron-down"></i></div>
+
+            <div class="step-item">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h3>週1回・1時間のオンライン教室</h3>
+                    <p>Pythonの基礎からデータ分析の実践まで、プランに沿ってマンツーマン（少人数）で進めます。</p>
+                </div>
+            </div>
+            <div class="step-arrow"><i class="fas fa-chevron-down"></i></div>
+
+            <div class="step-item" style="border-color: var(--accent); background: #f0fbff;">
+                <div class="step-num" style="background: var(--accent);">GOAL</div>
+                <div class="step-content">
+                    <h3>AI・機械学習モデルの完成（半年〜1年）</h3>
+                    <p>半年から1年をかけ、自分だけの予測モデルや画像認識AIなどを構築。本物の「創る力」を習得します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="problem-solving">
+        <h2>こんな「困りごと」ありませんか？</h2>
+        <div class="pain-points">
+            <div class="pain-list">
+                <div class="pain-item">
+                    <strong>【小中高生の保護者の方】</strong>
+                    <p>近くにAI・データサイエンスまで本格的に学べるプログラミング教室が少ない。遊びだけでなく、将来役立つ論理的思考やPCスキルを身につけてほしい…</p>
+                </div>
+                <div class="pain-item">
+                    <strong>【社会人の方】</strong>
+                    <p>仕事でAIやデータ活用を求められるが、相談できる相手がいない。地元のビジネスをDXで盛り上げたいが、何から手をつければいいか…</p>
+                </div>
+                <div class="pain-item">
+                    <strong>【共通の悩み】</strong>
+                    <p>独学でPythonを始めたが、挫折した。自分の興味があるデータを使って、もっと楽しく実践的に学びたい…</p>
+                </div>
+            </div>
+            <div class="solution-arrow"><i class="fas fa-chevron-down"></i></div>
+            <div style="text-align: center; font-size: 1.4rem; font-weight: bold; color: var(--primary);">
+                にかほ市の現役シニアデータサイエンティストが<br>「楽しみながら動くAIを作る体験」で解決します。
+            </div>
+        </div>
+    </section>
+
+    <section id="details">
+        <h2>コース概要・料金</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>対象年齢</h3>
+                <p style="font-size: 1.1rem; font-weight: bold;">小学校5年生 〜 社会人</p>
+                <p>初心者歓迎。レベルに合わせて難易度を完全調整。大人の方の学び直しも大歓迎です。</p>
+            </div>
+            <div class="info-card">
+                <h3>スケジュール</h3>
+                <p style="font-size: 1.1rem; font-weight: bold;">毎週 土曜日 11:00 〜 12:00</p>
+                <p>週1回（月4回）のオンライン個別・少人数授業。</p>
+            </div>
+            <div class="info-card">
+                <div class="badge">先着5名モニター価格</div>
+                <h3>月謝</h3>
+                <span class="price-old">通常 20,000円</span>
+                <span class="price-new">10,000円 <span style="font-size: 1rem;">(税込)</span></span>
+                <p style="font-size: 0.85rem; margin-top: 5px;">※先着5名様限定。教材費込み。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="curriculum">
+        <h2>対応可能な学習・実践事項</h2>
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h3><i class="fas fa-chart-line"></i> データ分析・統計</h3>
+                <ul>
+                    <li>Pythonを用いたデータの可視化</li>
+                    <li>身近なデータ（天気・ゲーム等）の分析</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fas fa-robot"></i> 機械学習・AI構築</h3>
+                <ul>
+                    <li>熊の出没を予測するモデル</li>
+                    <li>画像認識AI（写真から物を判別）の体験</li>
+                    <li>AIエージェント作成</li>
+                    <li>チャットボット作成</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3><i class="fas fa-laptop-code"></i> ビジネス・DX実践</h3>
+                <ul>
+                    <li>業務効率化のPython自動化ツール</li>
+                    <li>生成AIを使いこなす指示術（プロンプト）</li>
+                    <li>AI導入のプロトタイプ作成支援</li>
+                    <li>Claude Codeを使ったAI駆動開発の体験</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; background: linear-gradient(135deg, #e8f5e9, #f0fbff); border: 2px solid var(--accent); border-radius: 20px; padding: 35px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                <span style="background: var(--orange); color: white; font-size: 0.8rem; font-weight: bold; padding: 3px 12px; border-radius: 20px;">実際に構築したサービス</span>
+            </div>
+            <h3 style="color: var(--primary); margin: 0 0 10px 0; font-size: 1.3rem;"><i class="fas fa-map-marked-alt" style="color: var(--accent); margin-right: 8px;"></i>熊予報マップ</h3>
+            <p style="margin: 0 0 15px 0;">過去の出没データと気象情報などを組み合わせ、熊の出没リスクをマップ上に可視化したAIサービス。「こんなものが本当に作れるの？」をリアルに体験してほしいというのがラボの出発点です。</p>
+            <a href="/cases/#kuma-forecast" style="display: inline-flex; align-items: center; gap: 8px; color: var(--primary); font-weight: bold; text-decoration: none; border: 2px solid var(--primary); padding: 8px 20px; border-radius: 30px; transition: 0.3s;" onmouseover="this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--primary)'">
+                <i class="fas fa-external-link-alt"></i> 熊予報マップの事例を見る
+            </a>
+        </div>
+
+        <div style="margin-top: 25px; background: linear-gradient(135deg, #fff3e0, #fef8f0); border: 2px solid var(--accent); border-radius: 20px; padding: 35px;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                <span style="background: var(--orange); color: white; font-size: 0.8rem; font-weight: bold; padding: 3px 12px; border-radius: 20px;">実際に構築したサービス</span>
+            </div>
+            <h3 style="color: var(--primary); margin: 0 0 10px 0; font-size: 1.3rem;"><i class="fas fa-film" style="color: var(--accent); margin-right: 8px;"></i>おもいでリマスター</h3>
+            <p style="margin: 0 0 15px 0;">劣化した古いビデオ映像をAI技術で高解像度に復元する受託サービス。趣味の技術検証から、お客様に実際にご依頼いただく商用サービスへ育てるまでの過程も、教室で共有しています。</p>
+            <a href="/cases/#omoide-remaster" style="display: inline-flex; align-items: center; gap: 8px; color: var(--primary); font-weight: bold; text-decoration: none; border: 2px solid var(--primary); padding: 8px 20px; border-radius: 30px; transition: 0.3s;" onmouseover="this.style.background='var(--primary)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--primary)'">
+                <i class="fas fa-external-link-alt"></i> おもいでリマスターの事例を見る
+            </a>
+        </div>
+    </section>
+
+    <section id="organization">
+        <div class="org-box">
+            <span class="org-tag">運営組織</span>
+            <h2>Corota AI Lab.</h2>
+            <p><strong>秋田県にかほ市</strong>を拠点に活動する、にかほ市商工会所属の個人事業組織です。<br>
+                地域のAI活用課題の解決、および次世代のデジタル人材育成をミッションとしています。</p>
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+            <p><strong>【法人・団体の皆さまへ】</strong><br>
+                にかほ・由利本荘・酒田周辺企業のDX推進、AI導入課題のコンサルティングも承っております。</p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:corota.ai.lab@gmail.com" style="color: var(--accent); text-decoration: none;">corota.ai.lab@gmail.com</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:08080955424" style="color: var(--accent); text-decoration: none;">080-8095-5424</a></p>
+        </div>
+    </section>
+
+    <section id="instructor">
+        <h2>講師について</h2>
+        <div class="profile-container">
+            <div class="profile-img">
+                <i class="fas fa-user-circle fa-10x" style="color: #cbd5e0; font-size: 180px;"></i>
+            </div>
+            <div class="profile-text">
+                <h3>シニアデータサイエンティスト</h3>
+                <div class="credential-list">
+                    <span class="credential-tag">データサイエンス歴 7年</span>
+                    <span class="credential-tag">P社（大手人材企業）データサイエンティスト</span>
+                    <span class="credential-tag">社内教育・研修 実施経験あり</span>
+                    <span class="credential-tag">にかほ市商工会 所属</span>
+                </div>
+                <p><strong>経歴：</strong>国内大手人材グループ（P社）にてAI開発を担当し、現役のシニアデータサイエンティストとして活躍中。企業内での社内教育・研修にも携わった実績を持ちます。</p>
+                <p><strong>想い：</strong>「Corota AI Lab.」として、AI技術を楽しく・分かりやすく伝えることをモットーに、地域のデジタル課題にプロの視点から伴走します。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq">
+        <h2>よくあるご質問（Q&A）</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <h4>数学や算数が苦手な子でも大丈夫でしょうか？</h4>
+                <div class="faq-answer">
+                    <p><strong>全く問題ありません。</strong> 計算はコンピュータに任せ、まずは「AIがどう考えているか」を直感的に理解することから始めます。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h4>どのようなPCの準備が必要ですか？</h4>
+                <div class="faq-answer">
+                    <p><strong>学校配布のPC等でOKです。</strong> Webブラウザ上で動作するシステムを使うため、高価なPCを新調する必要はありません。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h4>実際のオンライン授業はどうやって行うのですか？</h4>
+                <div class="faq-answer">
+                    <p><strong>ビデオ通話はGoogle Meet、コーディング環境はGoogle Colabを使用します。</strong> どちらもブラウザだけで完結するため、追加のソフトインストールは不要です。社会人向けのClaude Code体験のみ、ご自身のPCへのインストールをお願いする場合があります。詳しくは<a href="/claude-code/">Claude Code導入支援</a>のページもご覧ください。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h4>社会人ですが、実務の相談は可能ですか？</h4>
+                <div class="faq-answer">
+                    <p><strong>大歓迎です。</strong> 業務効率化や予測モデル構築、Claude Codeを使ったAI駆動開発など、実務経験豊富な講師が現場で使える技術をサポートします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+        <div style="background: #fff4e5; border: 2px dashed var(--orange); padding: 40px; border-radius: 20px; display: inline-block; max-width: 600px;">
+            <h3 style="color: var(--orange); margin-top: 0;">全国どこからでもOK<br>2回無料体験実施中</h3>
+            <p>まずは公式LINEから、あなたの「やりたい」を教えてください。<br>
+            ※少人数制のため<strong>【先着5名様】</strong>のみの受付です。</p>
+            <br>
+            <a href="https://lin.ee/IQm1IVT" class="cta-button" style="background: #06C755;">
+                <i class="fab fa-line"></i> LINEで相談・体験予約
+            </a>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                お電話でのお問い合わせ：<a href="tel:08080955424" style="color: var(--primary); font-weight: bold;">080-8095-5424</a><br>
+                メール：<a href="mailto:corota.ai.lab@gmail.com" style="color: var(--primary);">corota.ai.lab@gmail.com</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Corota AI Lab. (秋田県にかほ市金浦字頃田128-6)</p>
+        <p style="font-size: 0.9rem; margin-top: 5px;">
+            <a href="tel:08080955424" class="contact-link">080-8095-5424</a>
+            &nbsp;|&nbsp;
+            <a href="mailto:corota.ai.lab@gmail.com" class="contact-link">corota.ai.lab@gmail.com</a>
+        </p>
+        <p style="font-size: 0.85rem; margin-top: 10px;">
+            <a href="/" class="contact-link">Corota AI Lab. 公式サイト</a>
+            &nbsp;|&nbsp;
+            <a href="/claude-code/" class="contact-link">Claude Code導入支援</a>
+            &nbsp;|&nbsp;
+            <a href="/ai-consulting/" class="contact-link">AIコンサル</a>
+        </p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">
+            <a href="legal.html" class="contact-link" style="margin: 0 10px;">特定商取引法に基づく表記・利用規約</a>
+        </p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', function() {
+            const isOpen = navLinks.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+        // メニュー項目クリック時に閉じる
+        navLinks.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navLinks.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', false);
+            });
+        });
+    </script>
+
+</body>
+</html>

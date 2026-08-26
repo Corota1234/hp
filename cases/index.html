@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-12M9E3R39H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-12M9E3R39H');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事例紹介 | Corota AI Lab.</title>
+    <meta name="description" content="Corota AI Lab.が秋田・にかほ市を拠点に開発した社会実装プロジェクトの事例紹介。熊出没予測AI「くま予報」、AI動画高画質化サービス「おもいでリマスター」、AI・データサイエンス教室の実績。">
+    <link rel="canonical" href="https://corota-ai-lab.com/cases/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="Corota AI Lab.">
+    <meta property="og:title" content="事例紹介 | Corota AI Lab.">
+    <meta property="og:description" content="秋田・にかほ市を拠点に開発した社会実装プロジェクトの事例紹介。">
+    <meta property="og:url" content="https://corota-ai-lab.com/cases/">
+    <meta property="og:image" content="https://corota-ai-lab.com/favicon.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --paper: #fcfcfc; --ink: #111111; --accent: #2563eb; }
+        body {
+            background-color: var(--paper); color: var(--ink);
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-image: radial-gradient(#e5e7eb 0.5px, transparent 0.5px);
+            background-size: 40px 40px;
+        }
+        .serif { font-family: 'Noto Serif JP', serif; }
+        .mono  { font-family: 'JetBrains Mono', monospace; }
+        .section-border { border-top: 1px solid rgba(0,0,0,0.08); }
+        .btn-main {
+            background: var(--ink); color: #fff; padding: 0.75rem 2rem; font-size: 0.75rem;
+            letter-spacing: 0.1em; transition: all 0.3s; border-radius: 2px;
+        }
+        .btn-main:hover { background: var(--accent); transform: translateY(-2px); }
+        .img-box { filter: grayscale(100%); transition: filter 0.5s ease; background-color: #eee; }
+        .img-box:hover { filter: grayscale(0%); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">&larr; Corota AI Lab.</a>
+                <h1 class="font-bold text-lg tracking-tighter hidden md:block">事例紹介</h1>
+            </div>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="#kuma-forecast" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Kuma Forecast</a>
+                <a href="#omoide-remaster" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Omoide Remaster</a>
+                <a href="#education" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Education</a>
+                <a href="/articles/" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Articles</a>
+                <a href="/#contact" class="btn-main px-6 py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16">
+
+        <section class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+            <div class="max-w-2xl">
+                <div class="flex items-center gap-2 mb-8">
+                    <span class="w-8 h-[1px] bg-blue-600"></span>
+                    <span class="mono text-[10px] text-blue-600 font-bold uppercase tracking-[0.3em]">Cases</span>
+                </div>
+                <h2 class="serif text-4xl md:text-6xl leading-[1.2] mb-10">
+                    社会実装<br><span class="italic font-normal">プロジェクト</span>の記録。
+                </h2>
+                <p class="text-slate-500 text-sm md:text-base max-w-md leading-relaxed">
+                    Corota AI Lab.が秋田県にかほ市を拠点に開発・運用している、実際に動いているAIサービスの事例です。
+                </p>
+            </div>
+        </section>
+
+        <section id="kuma-forecast" class="section-border bg-white py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <p class="mono text-[10px] text-blue-600 mb-3 tracking-[0.3em]">CASE 01</p>
+                        <h4 class="serif text-4xl mb-6 italic">くま予報</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                            AIとGIS（地理情報システム）を組み合わせたクマの出没リスク予測サービスです。秋田・山形の目撃情報を収集・分析し、地域の安全に役立てることを目指しています。
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-8">
+                            過去の出没データと気象情報などを組み合わせ、出没リスクをマップ上に可視化。「こんなものが本当に作れるのか」を実際に体験してもらうことが、Corota AI Lab.の技術力を伝える最初の一歩になっています。
+                        </p>
+                        <ul class="mono text-[10px] space-y-2 text-slate-400 mb-8">
+                            <li>[ REGION ] 秋田 / 山形 / 宮城</li>
+                            <li>[ TECH ] AI予測モデル × GIS可視化</li>
+                        </ul>
+                        <a href="https://kuma-forecast.corota-ai-lab.com/" class="mono text-[10px] font-bold border-b border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition uppercase tracking-widest">サービスを見る &rarr;</a>
+                    </div>
+                    <div class="order-1 md:order-2 img-box aspect-video rounded-sm overflow-hidden border border-black/5 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&q=80&w=1000" alt="クマ" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="omoide-remaster" class="section-border bg-[#fcfcfc] py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="img-box aspect-video rounded-sm overflow-hidden border border-black/5 shadow-lg bg-slate-100">
+                        <img src="/images/omoide-remaster-demo.jpg" alt="おもいでリマスター ビフォーアフター" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <p class="mono text-[10px] text-blue-600 mb-3 tracking-[0.3em]">CASE 02</p>
+                        <h4 class="serif text-4xl mb-6 italic">おもいでリマスター</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                            古いホームビデオやDVD画質の映像を、AI技術で自然で鮮やかな高解像度映像にリマスターするサービスです。劣化した結婚式や子供の記録映像など、大切な思い出をもう一度綺麗な画面で見返せる状態に残します。
+                        </p>
+                        <p class="text-xs text-slate-400 leading-relaxed mb-8">
+                            趣味の技術検証として始めた画像超解像の研究を、実際にお客様からご依頼いただける商用サービスへ育てました。AI駆動開発を実務に落とし込む過程そのものが、Claude Code研修の実例にもなっています。
+                        </p>
+                        <ul class="mono text-[10px] space-y-2 text-slate-400 mb-8">
+                            <li>[ TARGET ] 古い動画をお持ちの個人のお客様</li>
+                            <li>[ TECH ] AI動画超解像</li>
+                        </ul>
+                        <a href="https://omoide-remaster.corota-ai-lab.com/" class="mono text-[10px] font-bold border-b border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition uppercase tracking-widest">サービスを見る &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section-border bg-white py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <p class="mono text-[10px] text-blue-600 mb-3 tracking-[0.3em]">CASE 03</p>
+                        <h4 class="serif text-4xl mb-6 italic">データサイエンス・ラボ</h4>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-6">
+                            小学生から社会人まで、AI・機械学習・データ分析・AIエージェント開発を学べるオンライン教室です。上記の「くま予報」「おもいでリマスター」も、教室の中で実例として共有しています。
+                        </p>
+                        <ul class="mono text-[10px] space-y-2 text-slate-400 mb-8">
+                            <li>[ TARGET ] 小学生 / 中学生 / 高校生 / 社会人</li>
+                            <li>[ SUBJECT ] AI / ML / DATA / AGENT</li>
+                            <li>[ STATUS ] OPEN</li>
+                        </ul>
+                        <a href="/ai-education/" class="mono text-[10px] font-bold border-b border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition uppercase tracking-widest">詳しく見る &rarr;</a>
+                    </div>
+                    <div class="order-1 md:order-2 img-box aspect-video rounded-sm overflow-hidden border border-black/5 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1000" alt="Programming School" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact" class="section-border py-32 bg-[#fcfcfc] px-6">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="serif text-4xl md:text-5xl italic mb-10 text-slate-800">次の事例は、あなたの現場かもしれません。</h2>
+                <p class="mono text-[10px] text-slate-400 tracking-[0.5em] mb-16 uppercase">Akita / Nikaho — Data Science &amp; AI</p>
+                <div class="inline-block border border-black p-1">
+                    <a href="mailto:corota.ai.lab@gmail.com" class="btn-main block px-12 py-4 rounded-none">corota.ai.lab@gmail.com</a>
+                </div>
+                <div class="mt-32 pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="mono text-[9px] opacity-40 tracking-widest lowercase">© 2026 corota ai lab. akita nikaho jpn</p>
+                    <div class="flex space-x-8 mono text-[9px] opacity-40 uppercase tracking-widest">
+                        <a href="/" class="hover:opacity-100 transition">Home</a>
+                        <a href="/articles/" class="hover:opacity-100 transition">Articles</a>
+                        <a href="/ai-consulting/" class="hover:opacity-100 transition">AI Consulting</a>
+                        <a href="/privacy.html" class="hover:opacity-100 transition">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

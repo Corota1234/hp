@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-12M9E3R39H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-12M9E3R39H');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初心者向け Claude Code の使い方 | Corota AI Lab.</title>
+    <meta name="description" content="Claude Codeとは何か、普通のチャットAIと何が違うのか、プログラミング初心者にも分かるように解説します。">
+    <link rel="canonical" href="https://corota-ai-lab.com/articles/claude-code-basics/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="Corota AI Lab.">
+    <meta property="og:title" content="初心者向け Claude Code の使い方 | Corota AI Lab.">
+    <meta property="og:description" content="Claude Codeとは何か、普通のチャットAIと何が違うのか、プログラミング初心者にも分かるように解説します。">
+    <meta property="og:url" content="https://corota-ai-lab.com/articles/claude-code-basics/">
+    <meta property="og:image" content="https://corota-ai-lab.com/favicon.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "初心者向け Claude Code の使い方",
+      "datePublished": "2026-08-26",
+      "author": {"@type": "Organization", "name": "Corota AI Lab."},
+      "publisher": {"@type": "Organization", "name": "Corota AI Lab.", "url": "https://corota-ai-lab.com/"}
+    }
+    </script>
+    <style>
+        :root { --paper: #fcfcfc; --ink: #111111; --accent: #2563eb; }
+        body {
+            background-color: var(--paper); color: var(--ink);
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+        .serif { font-family: 'Noto Serif JP', serif; }
+        .mono  { font-family: 'JetBrains Mono', monospace; }
+        .section-border { border-top: 1px solid rgba(0,0,0,0.08); }
+        .btn-main {
+            background: var(--ink); color: #fff; padding: 0.75rem 2rem; font-size: 0.75rem;
+            letter-spacing: 0.1em; transition: all 0.3s; border-radius: 2px;
+        }
+        .btn-main:hover { background: var(--accent); transform: translateY(-2px); }
+        .prose { color: #334155; }
+        .prose h2 { font-family: 'Noto Serif JP', serif; font-style: italic; font-size: 1.5rem; margin-top: 2.5em; }
+        .prose h3 { font-weight: 700; font-size: 1.15rem; margin-top: 2em; }
+        .prose a { color: var(--accent); }
+        .prose code { background: #f1f5f9; padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.85em; }
+        .prose pre { background: #0f172a; color: #e2e8f0; padding: 1.25em; border-radius: 8px; overflow-x: auto; }
+        .prose pre code { background: none; padding: 0; color: inherit; }
+        .prose blockquote { border-left: 3px solid var(--accent); padding-left: 1em; color: #64748b; font-style: normal; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">&larr; Corota AI Lab.</a>
+                <a href="/articles/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">記事一覧</a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="/cases/" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Cases</a>
+                <a href="/ai-consulting/" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Consulting</a>
+                <a href="/#contact" class="btn-main px-6 py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <article class="max-w-3xl mx-auto px-6 py-20 md:py-28">
+            <p class="mono text-[10px] text-blue-600 mb-4 tracking-widest uppercase">2026-08-26 &middot; Claude Code</p>
+            <h1 class="serif text-3xl md:text-4xl leading-[1.4] mb-12">初心者向け Claude Code の使い方</h1>
+            <div class="prose prose-slate max-w-none">
+<h2 id="claude-code">Claude Codeとは何か</h2>
+<p>Claude Codeは、Anthropic社が提供する「AIコーディングエージェント」です。ChatGPTのようなチャット型AIとの一番の違いは、<strong>会話をするだけでなく、実際にファイルを読み書きしたり、プログラムを実行したりできる</strong>点にあります。</p>
+<p>たとえば「このバグを直して」と話しかけると、Claude Codeは自分でコードを読みに行き、原因を探し、修正し、必要であればテストを実行して結果を確認するところまでを一気にやってくれます。人間が一つずつコピー&amp;ペーストする必要はありません。</p>
+<h2 id="ai">普通のチャットAIとの違い</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>チャット型AI</th>
+<th>Claude Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>できること</td>
+<td>質問に答える、コードの案を出す</td>
+<td>実際にファイルを操作・実行する</td>
+</tr>
+<tr>
+<td>作業の単位</td>
+<td>一問一答</td>
+<td>複数ステップの作業をまとめて実行</td>
+</tr>
+<tr>
+<td>確認の仕組み</td>
+<td>特になし</td>
+<td>重要な操作の前に確認を挟める</td>
+</tr>
+</tbody>
+</table>
+<p>「教えてもらう」から「一緒に手を動かしてもらう」道具になった、とイメージすると分かりやすいと思います。</p>
+<h2 id="_1">基本的な使い方</h2>
+<p>Claude Codeは、パソコンの中の「ターミナル」と呼ばれる画面から操作します。難しそうに聞こえますが、実際にやることはシンプルです。</p>
+<ol>
+<li>Claude Codeを起動する</li>
+<li>やってほしいことを日本語（または英語）で伝える</li>
+<li>Claude Codeが計画を立てて作業を進める</li>
+<li>重要な操作の前には確認が入るので、内容を見て許可する</li>
+</ol>
+<p>たとえばこんなやりとりになります。</p>
+<pre><code>あなた: &gt; このバグ直しておいて
+
+Claude Code: ✓ index.tsのタイポを検出・修正しました
+             ✓ テストを実行中... 全て成功 (12/12)
+</code></pre>
+<h2 id="claudemd">CLAUDE.mdという「取扱説明書」</h2>
+<p>Claude Codeには「CLAUDE.md」という特別なファイルを置く仕組みがあります。これはプロジェクトごとの「このプロジェクトではこういうルールで作業してほしい」という指示書のようなものです。書いておくと、Claude Codeが毎回そのルールを踏まえて作業してくれるようになります。</p>
+<h2 id="_2">初心者がつまずきやすいポイント</h2>
+<ul>
+<li><strong>指示が抽象的すぎる</strong>: 「いい感じにして」だけでは伝わりにくいです。「〇〇の処理を高速化して」のように具体的に伝えると精度が上がります。</li>
+<li><strong>確認をよく見ずに許可してしまう</strong>: 特にファイルの削除や外部への送信など、取り消しにくい操作は内容をきちんと確認する習慣が大切です。</li>
+<li><strong>いきなり大きなことを頼んでしまう</strong>: 慣れるまでは、小さなタスクから試すのがおすすめです。</li>
+</ul>
+<h2 id="_3">まとめ</h2>
+<p>Claude Codeは、プログラミング経験がまだ浅い方でも、正しい使い方を知っていれば強力な武器になります。書籍や動画で学ぶよりも、実際に手を動かしながら覚えるのが一番の近道です。</p>
+<p>もっと体系的に学びたい方は、<a href="/claude-code/">Claude Code即戦力研修</a>で、実際の業務コードを使ったハンズオン形式の研修も行っています。</p>
+            </div>
+        </article>
+
+        <section class="section-border bg-[#fcfcfc] py-16 px-6">
+            <div class="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <a href="/articles/" class="mono text-[10px] font-bold border-b border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition uppercase tracking-widest">&larr; 記事一覧に戻る</a>
+                <a href="/ai-consulting/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">AIコンサルの相談はこちら &rarr;</a>
+            </div>
+        </section>
+
+        <footer class="section-border py-16 bg-white px-6 text-center">
+            <p class="mono text-[9px] opacity-40 tracking-widest lowercase">© 2026 corota ai lab. akita nikaho jpn</p>
+        </footer>
+    </main>
+</body>
+</html>

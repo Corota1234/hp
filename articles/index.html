@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-12M9E3R39H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-12M9E3R39H');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記事 | Corota AI Lab.</title>
+    <meta name="description" content="Corota AI Lab.が発信する、AI活用のヒントや地域でのAI導入事例に関する記事一覧。">
+    <link rel="canonical" href="https://corota-ai-lab.com/articles/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="Corota AI Lab.">
+    <meta property="og:title" content="記事 | Corota AI Lab.">
+    <meta property="og:description" content="AI活用のヒントや地域でのAI導入事例に関する記事一覧。">
+    <meta property="og:url" content="https://corota-ai-lab.com/articles/">
+    <meta property="og:image" content="https://corota-ai-lab.com/favicon.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --paper: #fcfcfc; --ink: #111111; --accent: #2563eb; }
+        body {
+            background-color: var(--paper); color: var(--ink);
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-image: radial-gradient(#e5e7eb 0.5px, transparent 0.5px);
+            background-size: 40px 40px;
+        }
+        .serif { font-family: 'Noto Serif JP', serif; }
+        .mono  { font-family: 'JetBrains Mono', monospace; }
+        .section-border { border-top: 1px solid rgba(0,0,0,0.08); }
+        .btn-main {
+            background: var(--ink); color: #fff; padding: 0.75rem 2rem; font-size: 0.75rem;
+            letter-spacing: 0.1em; transition: all 0.3s; border-radius: 2px;
+        }
+        .btn-main:hover { background: var(--accent); transform: translateY(-2px); }
+        .article-card { transition: all 0.3s; }
+        .article-card:hover { border-color: #2563eb; transform: translateY(-2px); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">&larr; Corota AI Lab.</a>
+                <h1 class="font-bold text-lg tracking-tighter hidden md:block">記事</h1>
+            </div>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="/cases/" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Cases</a>
+                <a href="/ai-consulting/" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Consulting</a>
+                <a href="/#contact" class="btn-main px-6 py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16">
+
+        <section class="max-w-7xl mx-auto px-6 py-24 md:py-32">
+            <div class="max-w-2xl">
+                <div class="flex items-center gap-2 mb-8">
+                    <span class="w-8 h-[1px] bg-blue-600"></span>
+                    <span class="mono text-[10px] text-blue-600 font-bold uppercase tracking-[0.3em]">Articles</span>
+                </div>
+                <h2 class="serif text-4xl md:text-6xl leading-[1.2] mb-10">
+                    AI活用の<br><span class="italic font-normal">ヒント</span>と記録。
+                </h2>
+                <p class="text-slate-500 text-sm md:text-base max-w-md leading-relaxed">
+                    AIセミナーの様子、地域企業でのAI導入事例、開発の裏側などを記事として発信していきます。
+                </p>
+            </div>
+        </section>
+
+        <!-- ===== 記事一覧 =====
+             このセクションは scripts/build_articles.py によって自動生成されます。
+             記事を追加・編集する場合は、D:/develop/SR/Business/articles/ に
+             Markdownファイルを追加・編集してから build_articles.py を再実行してください。
+             このHTMLを直接手編集しても、次回のビルドで上書きされます。
+        -->
+        <section class="section-border bg-white py-24 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="article-list grid md:grid-cols-2 gap-8">
+                    <a href="/articles/ai-ml-basics/" class="article-card block border border-slate-100 rounded-sm p-8">
+                        <p class="mono text-[9px] text-slate-400 mb-3 tracking-widest">2026-08-26 &middot; AI教育</p>
+                        <h3 class="text-base font-medium mb-2">AIと機械学習の基礎知識 — 何が違うの？</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">「AI」と「機械学習」の違いから、機械学習がどうやって「学習」するのかまで、初めての方向けにやさしく解説します。</p>
+                    </a>
+
+                    <a href="/articles/claude-code-basics/" class="article-card block border border-slate-100 rounded-sm p-8">
+                        <p class="mono text-[9px] text-slate-400 mb-3 tracking-widest">2026-08-26 &middot; Claude Code</p>
+                        <h3 class="text-base font-medium mb-2">初心者向け Claude Code の使い方</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Claude Codeとは何か、普通のチャットAIと何が違うのか、プログラミング初心者にも分かるように解説します。</p>
+                    </a>
+
+                    <a href="/articles/manufacturing-ai-challenges/" class="article-card block border border-slate-100 rounded-sm p-8">
+                        <p class="mono text-[9px] text-slate-400 mb-3 tracking-widest">2026-08-26 &middot; AIコンサル</p>
+                        <h3 class="text-base font-medium mb-2">製造業における課題とAIによる解決案</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">地方の中小製造業が抱えがちな課題を整理し、それぞれに対する具体的なAI活用事例を紹介します。</p>
+                    </a>
+
+                    <a href="/articles/regression-classification-basics/" class="article-card block border border-slate-100 rounded-sm p-8">
+                        <p class="mono text-[9px] text-slate-400 mb-3 tracking-widest">2026-08-26 &middot; AI教育</p>
+                        <h3 class="text-base font-medium mb-2">回帰分析と分類問題の基礎 — 「予測する」とはどういうことか</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">機械学習の代表的な2つのタスク、回帰分析（数値予測）と分類（カテゴリ予測）の違いを、具体例で解説します。</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact" class="section-border py-32 bg-[#fcfcfc] px-6">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="serif text-4xl md:text-5xl italic mb-10 text-slate-800">気になることがあれば、お気軽にどうぞ。</h2>
+                <p class="mono text-[10px] text-slate-400 tracking-[0.5em] mb-16 uppercase">Akita / Nikaho — Data Science &amp; AI</p>
+                <div class="inline-block border border-black p-1">
+                    <a href="mailto:corota.ai.lab@gmail.com" class="btn-main block px-12 py-4 rounded-none">corota.ai.lab@gmail.com</a>
+                </div>
+                <div class="mt-32 pt-12 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="mono text-[9px] opacity-40 tracking-widest lowercase">© 2026 corota ai lab. akita nikaho jpn</p>
+                    <div class="flex space-x-8 mono text-[9px] opacity-40 uppercase tracking-widest">
+                        <a href="/" class="hover:opacity-100 transition">Home</a>
+                        <a href="/cases/" class="hover:opacity-100 transition">Cases</a>
+                        <a href="/privacy.html" class="hover:opacity-100 transition">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

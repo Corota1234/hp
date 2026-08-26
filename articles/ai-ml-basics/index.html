@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-12M9E3R39H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-12M9E3R39H');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIと機械学習の基礎知識 — 何が違うの？ | Corota AI Lab.</title>
+    <meta name="description" content="「AI」と「機械学習」の違いから、機械学習がどうやって「学習」するのかまで、初めての方向けにやさしく解説します。">
+    <link rel="canonical" href="https://corota-ai-lab.com/articles/ai-ml-basics/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="Corota AI Lab.">
+    <meta property="og:title" content="AIと機械学習の基礎知識 — 何が違うの？ | Corota AI Lab.">
+    <meta property="og:description" content="「AI」と「機械学習」の違いから、機械学習がどうやって「学習」するのかまで、初めての方向けにやさしく解説します。">
+    <meta property="og:url" content="https://corota-ai-lab.com/articles/ai-ml-basics/">
+    <meta property="og:image" content="https://corota-ai-lab.com/favicon.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "AIと機械学習の基礎知識 — 何が違うの？",
+      "datePublished": "2026-08-26",
+      "author": {"@type": "Organization", "name": "Corota AI Lab."},
+      "publisher": {"@type": "Organization", "name": "Corota AI Lab.", "url": "https://corota-ai-lab.com/"}
+    }
+    </script>
+    <style>
+        :root { --paper: #fcfcfc; --ink: #111111; --accent: #2563eb; }
+        body {
+            background-color: var(--paper); color: var(--ink);
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+        .serif { font-family: 'Noto Serif JP', serif; }
+        .mono  { font-family: 'JetBrains Mono', monospace; }
+        .section-border { border-top: 1px solid rgba(0,0,0,0.08); }
+        .btn-main {
+            background: var(--ink); color: #fff; padding: 0.75rem 2rem; font-size: 0.75rem;
+            letter-spacing: 0.1em; transition: all 0.3s; border-radius: 2px;
+        }
+        .btn-main:hover { background: var(--accent); transform: translateY(-2px); }
+        .prose { color: #334155; }
+        .prose h2 { font-family: 'Noto Serif JP', serif; font-style: italic; font-size: 1.5rem; margin-top: 2.5em; }
+        .prose h3 { font-weight: 700; font-size: 1.15rem; margin-top: 2em; }
+        .prose a { color: var(--accent); }
+        .prose code { background: #f1f5f9; padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.85em; }
+        .prose pre { background: #0f172a; color: #e2e8f0; padding: 1.25em; border-radius: 8px; overflow-x: auto; }
+        .prose pre code { background: none; padding: 0; color: inherit; }
+        .prose blockquote { border-left: 3px solid var(--accent); padding-left: 1em; color: #64748b; font-style: normal; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">&larr; Corota AI Lab.</a>
+                <a href="/articles/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">記事一覧</a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="/cases/" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Cases</a>
+                <a href="/ai-consulting/" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Consulting</a>
+                <a href="/#contact" class="btn-main px-6 py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <article class="max-w-3xl mx-auto px-6 py-20 md:py-28">
+            <p class="mono text-[10px] text-blue-600 mb-4 tracking-widest uppercase">2026-08-26 &middot; AI教育</p>
+            <h1 class="serif text-3xl md:text-4xl leading-[1.4] mb-12">AIと機械学習の基礎知識 — 何が違うの？</h1>
+            <div class="prose prose-slate max-w-none">
+<h2 id="ai">「AI」と「機械学習」はイコールではない</h2>
+<p>ニュースなどで「AI」と「機械学習」という言葉がほぼ同じ意味で使われているのを見かけますが、正確には少し違います。</p>
+<ul>
+<li><strong>AI（人工知能）</strong>: 人間のような知的な処理をコンピュータで実現しようとする、大きな分野全体の呼び名</li>
+<li><strong>機械学習</strong>: AIを実現するための代表的な「手法」の一つ</li>
+</ul>
+<p>つまり、機械学習はAIという大きな箱の中に入っている道具の一つ、というイメージです。他にも人間があらかじめルールを全部書いておく「ルールベース」のAIなど、機械学習を使わないAIも存在します。</p>
+<h2 id="_1">機械学習は「データから規則性を見つける」技術</h2>
+<p>昔ながらのプログラムは、人間が「もし〇〇なら△△する」というルールを一つひとつ書いていました。これに対して機械学習は、<strong>大量のデータを与えると、コンピュータ自身がその中の規則性やパターンを見つけ出す</strong>という考え方です。</p>
+<p>たとえば「気温とアイスの売上のデータ」をたくさん見せると、機械学習は「気温が上がるほど売上も上がりやすい」という関係性を自分で見つけ出します。人間がその関係式を書く必要はありません。</p>
+<h2 id="3">学習の3つのタイプ</h2>
+<p>機械学習には、大きく分けて3つの学び方があります。</p>
+<ol>
+<li><strong>教師あり学習</strong>: 「問題と正解のペア」をたくさん見せて学ぶ方法。一番よく使われるタイプです。</li>
+<li><strong>教師なし学習</strong>: 正解を教えずに、データの中のグループ分けや構造を見つけさせる方法。</li>
+<li><strong>強化学習</strong>: 試行錯誤を繰り返しながら、良い結果につながる行動を学んでいく方法。ゲームAIなどでよく使われます。</li>
+</ol>
+<h2 id="_2">身近な例：くま予報マップ</h2>
+<p>Corota AI Lab.が開発している<a href="/cases/#kuma-forecast">くま予報マップ</a>は、教師あり学習の分かりやすい例です。過去の「クマの目撃情報」と「その時の気象条件や地形などのデータ」のペアを大量に学習させることで、「こういう条件のときはクマが出やすい」という規則性をAIが見つけ出し、出没リスクを予測しています。</p>
+<h2 id="ai_1">ディープラーニングと生成AIとの関係</h2>
+<p>近年話題の「ディープラーニング（深層学習）」は、機械学習の中でも特に「人間の脳の神経回路を模した仕組み」を使う手法です。画像認識や音声認識で大きな成果を上げ、ChatGPTやClaudeのような「生成AI」もこのディープラーニングを土台に作られています。</p>
+<p>つまり整理すると、AI ⊃ 機械学習 ⊃ ディープラーニング ⊃ 生成AI、という入れ子の関係になっています。</p>
+<h2 id="_3">まとめ</h2>
+<ul>
+<li>AIは大きな分野の名前、機械学習はその中の代表的な手法</li>
+<li>機械学習は「データから規則性を見つける」技術</li>
+<li>教師あり学習・教師なし学習・強化学習という3つの学び方がある</li>
+<li>生成AIも、この機械学習の延長線上にある技術</li>
+</ul>
+<p>実際に手を動かしてこの仕組みを体験してみたい方は、<a href="/ai-education/">データサイエンス・ラボ</a>でマンツーマン指導を行っています。</p>
+            </div>
+        </article>
+
+        <section class="section-border bg-[#fcfcfc] py-16 px-6">
+            <div class="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <a href="/articles/" class="mono text-[10px] font-bold border-b border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition uppercase tracking-widest">&larr; 記事一覧に戻る</a>
+                <a href="/ai-consulting/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">AIコンサルの相談はこちら &rarr;</a>
+            </div>
+        </section>
+
+        <footer class="section-border py-16 bg-white px-6 text-center">
+            <p class="mono text-[9px] opacity-40 tracking-widest lowercase">© 2026 corota ai lab. akita nikaho jpn</p>
+        </footer>
+    </main>
+</body>
+</html>

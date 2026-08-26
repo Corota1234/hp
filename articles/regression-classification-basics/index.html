@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-12M9E3R39H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-12M9E3R39H');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回帰分析と分類問題の基礎 — 「予測する」とはどういうことか | Corota AI Lab.</title>
+    <meta name="description" content="機械学習の代表的な2つのタスク、回帰分析（数値予測）と分類（カテゴリ予測）の違いを、具体例で解説します。">
+    <link rel="canonical" href="https://corota-ai-lab.com/articles/regression-classification-basics/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="Corota AI Lab.">
+    <meta property="og:title" content="回帰分析と分類問題の基礎 — 「予測する」とはどういうことか | Corota AI Lab.">
+    <meta property="og:description" content="機械学習の代表的な2つのタスク、回帰分析（数値予測）と分類（カテゴリ予測）の違いを、具体例で解説します。">
+    <meta property="og:url" content="https://corota-ai-lab.com/articles/regression-classification-basics/">
+    <meta property="og:image" content="https://corota-ai-lab.com/favicon.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Noto+Serif+JP:wght@600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "回帰分析と分類問題の基礎 — 「予測する」とはどういうことか",
+      "datePublished": "2026-08-26",
+      "author": {"@type": "Organization", "name": "Corota AI Lab."},
+      "publisher": {"@type": "Organization", "name": "Corota AI Lab.", "url": "https://corota-ai-lab.com/"}
+    }
+    </script>
+    <style>
+        :root { --paper: #fcfcfc; --ink: #111111; --accent: #2563eb; }
+        body {
+            background-color: var(--paper); color: var(--ink);
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+        }
+        .serif { font-family: 'Noto Serif JP', serif; }
+        .mono  { font-family: 'JetBrains Mono', monospace; }
+        .section-border { border-top: 1px solid rgba(0,0,0,0.08); }
+        .btn-main {
+            background: var(--ink); color: #fff; padding: 0.75rem 2rem; font-size: 0.75rem;
+            letter-spacing: 0.1em; transition: all 0.3s; border-radius: 2px;
+        }
+        .btn-main:hover { background: var(--accent); transform: translateY(-2px); }
+        .prose { color: #334155; }
+        .prose h2 { font-family: 'Noto Serif JP', serif; font-style: italic; font-size: 1.5rem; margin-top: 2.5em; }
+        .prose h3 { font-weight: 700; font-size: 1.15rem; margin-top: 2em; }
+        .prose a { color: var(--accent); }
+        .prose code { background: #f1f5f9; padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.85em; }
+        .prose pre { background: #0f172a; color: #e2e8f0; padding: 1.25em; border-radius: 8px; overflow-x: auto; }
+        .prose pre code { background: none; padding: 0; color: inherit; }
+        .prose blockquote { border-left: 3px solid var(--accent); padding-left: 1em; color: #64748b; font-style: normal; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">&larr; Corota AI Lab.</a>
+                <a href="/articles/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">記事一覧</a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="/cases/" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Cases</a>
+                <a href="/ai-consulting/" class="mono text-[10px] tracking-widest uppercase hover:text-blue-600 transition">Consulting</a>
+                <a href="/#contact" class="btn-main px-6 py-2">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-16">
+        <article class="max-w-3xl mx-auto px-6 py-20 md:py-28">
+            <p class="mono text-[10px] text-blue-600 mb-4 tracking-widest uppercase">2026-08-26 &middot; AI教育</p>
+            <h1 class="serif text-3xl md:text-4xl leading-[1.4] mb-12">回帰分析と分類問題の基礎 — 「予測する」とはどういうことか</h1>
+            <div class="prose prose-slate max-w-none">
+<h2 id="2">教師あり学習の2大タスク</h2>
+<p>前回の記事「<a href="/articles/ai-ml-basics/">AIと機械学習の基礎知識</a>」で、機械学習には「教師あり学習」という学び方があると紹介しました。この教師あり学習は、さらに大きく2つのタスクに分けられます。それが<strong>回帰</strong>と<strong>分類</strong>です。</p>
+<p>一言でいうと、違いはこうです。</p>
+<ul>
+<li><strong>回帰（かいき）</strong>: 「数値」を予測する</li>
+<li><strong>分類（ぶんるい）</strong>: 「カテゴリ・種類」を予測する</li>
+</ul>
+<h2 id="_1">回帰分析とは — 数値を当てる</h2>
+<p>回帰は、「明日の気温は何度か」「この家はいくらで売れそうか」のように、<strong>連続した数値</strong>を予測するタスクです。</p>
+<p>たとえば「家の広さ」と「価格」のデータをたくさん集めると、「広さが1平米増えるごとに、価格はだいたいこれくらい上がる」という関係性を見つけることができます。これを使えば、新しい家の広さが分かれば、価格をおおよそ予測できるようになります。これが最もシンプルな回帰分析（単回帰分析）の考え方です。</p>
+<p>実際には、広さだけでなく「築年数」「駅からの距離」など複数の要素を同時に使う「重回帰分析」もよく使われます。</p>
+<h2 id="_2">分類問題とは — カテゴリを当てる</h2>
+<p>分類は、「このメールは迷惑メールか、そうでないか」「この写真に写っているのは猫か犬か」のように、<strong>あらかじめ決まったカテゴリのどれに当てはまるか</strong>を予測するタスクです。</p>
+<p>答えが「はい/いいえ」の2択なら「2値分類」、3つ以上の選択肢から選ぶなら「多クラス分類」と呼ばれます。</p>
+<p>身近な例で言えば、<a href="/cases/#kuma-forecast">くま予報マップ</a>で「出没リスクが高い・中・低」を予測する部分は、この分類問題の考え方に近いものです。</p>
+<h2 id="_3">代表的な手法に少し触れてみる</h2>
+<p>初心者の方が最初に出会うことが多い手法をいくつか紹介します。</p>
+<ul>
+<li><strong>線形回帰</strong>: 回帰分析の基本形。データに最もよく合う直線（または平面）を見つける手法。</li>
+<li><strong>ロジスティック回帰</strong>: 名前に「回帰」とついていますが、実際には分類に使われる手法。「はい」である確率を計算します。</li>
+<li><strong>決定木</strong>: 「もし〇〇なら」というYES/NOの質問を繰り返して、答えにたどり着く手法。人間にも仕組みが理解しやすいのが特徴です。</li>
+</ul>
+<p>いきなり全部を覚える必要はありません。まずは「回帰＝数値」「分類＝カテゴリ」という大枠を押さえておけば十分です。</p>
+<h2 id="_4">予測の「精度」はどう測る？</h2>
+<p>分類問題でよく使われるのが「正解率（精度）」という指標です。100件予測して90件正解していれば、正解率は90%になります。</p>
+<p>ただし、実はこれだけでは不十分な場面もあります。たとえば「めったに起きない病気の診断」のように、そもそも「起きない」と予測し続けるだけで正解率が高くなってしまうケースがあるためです。実務では、正解率以外にもいくつかの指標を組み合わせて評価します。この辺りは少し発展的な内容になるので、また別の記事で扱いたいと思います。</p>
+<h2 id="_5">どちらを使うか迷ったら</h2>
+<p>「予測したい答えが数値かカテゴリか」を考えれば、回帰か分類かはほぼ決まります。</p>
+<ul>
+<li>売上、気温、価格 → 回帰</li>
+<li>はい/いいえ、種類、ランク → 分類</li>
+</ul>
+<h2 id="_6">まとめ</h2>
+<ul>
+<li>教師あり学習は大きく「回帰（数値予測）」と「分類（カテゴリ予測）」に分かれる</li>
+<li>線形回帰・ロジスティック回帰・決定木などが代表的な手法</li>
+<li>予測したい答えの種類を考えれば、どちらを使うべきかが見えてくる</li>
+</ul>
+<p>実際にデータを使って回帰・分類を体験してみたい方は、<a href="/ai-education/">データサイエンス・ラボ</a>で一緒に手を動かしながら学べます。</p>
+            </div>
+        </article>
+
+        <section class="section-border bg-[#fcfcfc] py-16 px-6">
+            <div class="max-w-3xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <a href="/articles/" class="mono text-[10px] font-bold border-b border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition uppercase tracking-widest">&larr; 記事一覧に戻る</a>
+                <a href="/ai-consulting/" class="mono text-[10px] text-slate-400 hover:text-blue-600 transition">AIコンサルの相談はこちら &rarr;</a>
+            </div>
+        </section>
+
+        <footer class="section-border py-16 bg-white px-6 text-center">
+            <p class="mono text-[9px] opacity-40 tracking-widest lowercase">© 2026 corota ai lab. akita nikaho jpn</p>
+        </footer>
+    </main>
+</body>
+</html>
